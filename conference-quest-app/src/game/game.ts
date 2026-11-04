@@ -147,7 +147,7 @@ export class Game {
   extra(name: 'restroom' | 'coffee' | 'phone') { this.go(name, () => this.say(EXTRAS[name])); }
 
   // Rob at the end of the hallway powers up.
-  meetRob() { this.go('rob', () => this.say('ROB: We are going to build everything!')); }
+  meetRob() { this.go('rob', () => this.say('ROB: CMS can build anything!')); }
 
   exitSession() {
     const s = this.state;
@@ -213,7 +213,7 @@ export class Game {
       default:
         if (k === 'A' || k === 'B') {
           if (this.typing() && k === 'A') return this.finishTyping();
-          this.toHall(s.screen === 'rob' ? 'ANTHONY: Did Rob just power up?! GINO: Guess we are building everything.' : 'GINO: Back to it.');
+          this.toHall(s.screen === 'rob' ? 'ANTHONY: You heard Rob. GINO: CMS can build anything.' : 'GINO: Back to it.');
         }
     }
   }

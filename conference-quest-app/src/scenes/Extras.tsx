@@ -1,4 +1,4 @@
-// The three joke scenes from the design: restroom ("HURRY UP!"), coffee ("ENERGY!!!") and play hooky (the boss texts).
+// The three joke scenes from the design: restroom ("HURRY UP!"), coffee ("ENERGY!!!") and skip a session (the boss texts).
 import { SPRITES } from '../game/sprites';
 import { Decor } from './common';
 
@@ -86,11 +86,7 @@ export function Phone() {
   return <div className="scene" style={{ background: '#3a3650' }}><Decor html={PHONE} /></div>;
 }
 
-// Rob powers up: golden aura, flames, rising sparks, lightning, screen shake and a white flash.
-const flame = (left: number, top: number, w: number, h: number, delay: number) =>
-  `<div style="position:absolute;left:${left}px;top:${top}px;width:${w}px;height:${h}px;background:linear-gradient(0deg,#ffb020,#ffe066 60%,#fff6c0);clip-path:polygon(50% 0,80% 45%,100% 100%,0 100%,20% 45%);transform-origin:50% 100%;opacity:.9;animation:flame .22s ${delay}s infinite alternate;"></div>`;
-const spark = (left: number, delay: number, dur: number) =>
-  `<div style="position:absolute;left:${left}px;top:400px;width:5px;height:16px;border-radius:3px;background:#fff6c0;box-shadow:0 0 8px #ffd84a;animation:rise ${dur}s ${delay}s linear infinite;opacity:0;"></div>`;
+// Rob gets fired up: lightning, BUILD MODE, screen shake and a white flash.
 const zap = (left: number, top: number, w: number, delay: number) =>
   `<div style="position:absolute;left:${left}px;top:${top}px;width:${w}px;height:${Math.round(w * 1.4)}px;background:#e8f6ff;filter:drop-shadow(0 0 6px #8fd0ff);clip-path:polygon(50% 0,100% 0,65% 40%,95% 40%,20% 100%,40% 55%,10% 55%);animation:flash .35s ${delay}s infinite;"></div>`;
 const shout = (left: number, delay: number) =>
@@ -99,12 +95,9 @@ const shout = (left: number, delay: number) =>
 const ROB = `
 <div style="position:absolute;left:0;right:0;top:360px;height:180px;background:#241c34;"></div>
 <div style="position:absolute;left:0;right:0;top:356px;height:6px;background:#3a2e50;"></div>
-<div style="position:absolute;left:300px;top:-10px;width:360px;height:430px;background:radial-gradient(ellipse 50% 55% at 50% 62%,rgba(255,250,200,.95) 0%,rgba(255,216,74,.85) 32%,rgba(255,168,32,.4) 58%,transparent 72%);animation:flicker .12s infinite alternate;"></div>
-${flame(330, 150, 50, 210, 0)}${flame(372, 90, 46, 260, 0.08)}${flame(420, 40, 40, 300, 0.15)}${flame(500, 40, 40, 300, 0.05)}${flame(544, 90, 46, 260, 0.12)}${flame(582, 150, 50, 210, 0.02)}
-${[340, 372, 398, 430, 456, 488, 512, 540, 566, 600, 620, 452].map((x, i) => spark(x, (i * 0.13) % 1, 0.8 + (i % 3) * 0.2)).join('')}
 ${zap(350, 110, 40, 0)}${zap(586, 80, 46, 0.12)}${zap(330, 250, 34, 0.22)}${zap(606, 230, 38, 0.06)}
-<img src="${SPRITES.robPowered}" alt="Rob, powered up" style="position:absolute;left:400px;top:46px;width:161px;height:330px;display:block;animation:robfloat 1.2s ease-in-out infinite;">
-<div style="position:absolute;left:36px;top:24px;font-size:16px;font-weight:800;color:#fff;">POWER LEVEL</div>
+<img src="${SPRITES.robPowered}" alt="Rob, arms raised" style="position:absolute;left:400px;top:46px;width:161px;height:330px;display:block;animation:robfloat 1.2s ease-in-out infinite;">
+<div style="position:absolute;left:36px;top:24px;font-size:16px;font-weight:800;color:#fff;">POWER PLATFORM LEVEL</div>
 <div style="position:absolute;left:36px;top:50px;width:240px;height:22px;background:#fff;border:4px solid #202028;border-radius:12px;box-sizing:border-box;overflow:hidden;"><div style="height:100%;background:linear-gradient(90deg,#ffb020,#ffe066);animation:fill 1.6s linear forwards;"></div></div>
 <div style="position:absolute;left:286px;top:44px;font-size:26px;font-weight:800;color:#ffd84a;text-shadow:3px 3px 0 #202028;opacity:0;animation:pop .4s 1.6s forwards;">MAX!</div>
 <div style="position:absolute;left:660px;right:20px;top:40px;text-align:center;font-size:52px;line-height:1.05;font-weight:800;color:#ffd84a;text-shadow:4px 4px 0 #202028;opacity:0;animation:pop .5s 1.8s forwards,pulse .5s 2.3s infinite;">BUILD<br>MODE!</div>
@@ -116,7 +109,7 @@ ${shout(130, 0.7)}${shout(790, 0.9)}
 
 export function RobPowerUp() {
   return (
-    <div className="scene" style={{ background: 'radial-gradient(circle at 50% 50%, #4a3410 0%, #1c1430 55%, #0c0a18 100%)', animation: 'buzz .1s 8' }}>
+    <div className="scene" style={{ background: 'radial-gradient(circle at 50% 50%, #2a2244 0%, #1c1430 55%, #0c0a18 100%)', animation: 'buzz .1s 8' }}>
       <Decor html={ROB} />
     </div>
   );

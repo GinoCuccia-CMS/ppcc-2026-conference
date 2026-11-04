@@ -92,7 +92,7 @@ export function Hallway() {
         <img src={SPRITES.anthonyBack} alt="Anthony" style={{ width: 150, height: 159, display: 'block', marginLeft: -14 }} />
       </div>
 
-      <button type="button" className="btn pill" style={{ left: 20, top: 16 }} onClick={() => game.extra('phone')}>Play hooky</button>
+      <button type="button" className="btn pill" style={{ left: 20, top: 16 }} onClick={() => game.extra('phone')}>Skip a session</button>
 
       <div className="panel" style={{ right: 20, top: 20, width: 420, padding: '10px 10px 8px' }}>
         <div style={{ fontSize: 16, fontWeight: 800, color: '#a8305a', padding: '0 8px 6px', display: 'flex', justifyContent: 'space-between' }}>

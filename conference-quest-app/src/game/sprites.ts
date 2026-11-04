@@ -44,10 +44,10 @@ function doc() {
     `<path d="M36 56 H88M36 72 H88M36 88 H88M36 104 H66" stroke="#b8c0d0" stroke-width="5" stroke-linecap="round"/>`);
 }
 
-// Rob: navy suit, white shirt, striped red tie, short dark hair and beard. `powered` = arms up,
-// spiky gold hair, glowing eyes, shouting (the power-up scene).
+// Rob: navy suit, white shirt, striped red tie, short dark hair and beard. `powered` = arms up and
+// shouting (the BUILD MODE scene); hair and eyes stay normal.
 function suited(p: Look, powered: boolean) {
-  const navy = '#2b3044', navyDark = '#1a1e2e', pants = '#232838', gold = '#ffd84a';
+  const navy = '#2b3044', navyDark = '#1a1e2e', pants = '#232838';
   const defs = `<defs><pattern id="tie" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="7" height="7" fill="#b02a35"/><rect width="2.2" height="7" fill="#1f2f6e"/><rect x="3.6" width="0.8" height="7" fill="#f4f4f4"/></pattern></defs>`;
   const legs = `<rect x="30" y="148" width="25" height="58" rx="8" fill="${pants}" stroke="${L}" stroke-width="3"/><rect x="65" y="148" width="25" height="58" rx="8" fill="${pants}" stroke="${L}" stroke-width="3"/>` +
     `<ellipse cx="41" cy="208" rx="19" ry="9" fill="#1a1418"/><ellipse cx="79" cy="208" rx="19" ry="9" fill="#1a1418"/>`;
@@ -69,18 +69,14 @@ function suited(p: Look, powered: boolean) {
   const head = ears(p) + `<ellipse cx="60" cy="54" rx="31" ry="35" fill="${p.skin}" stroke="${L}" stroke-width="3"/>` +
     `<path d="M30 56 Q31 98 60 98 Q89 98 90 56 Q86 72 76 74 Q68 80 60 79 Q52 80 44 74 Q34 72 30 56Z" fill="${p.beard}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>` +
     `<path d="M47 78 Q60 71 73 78 Q60 75 47 78Z" fill="${p.beard}" stroke="${L}" stroke-width="2"/>`;
-  const face = powered
-    ? `<circle cx="47" cy="57" r="5" fill="#2ad0c0" stroke="${L}" stroke-width="2"/><circle cx="73" cy="57" r="5" fill="#2ad0c0" stroke="${L}" stroke-width="2"/>` +
-      `<circle cx="47" cy="57" r="1.6" fill="${L}"/><circle cx="73" cy="57" r="1.6" fill="${L}"/>` +
-      `<path d="M37 43 L55 50M83 43 L65 50" stroke="#c89a10" stroke-width="5" stroke-linecap="round"/>` +
-      `<ellipse cx="60" cy="87" rx="9" ry="8" fill="#5a1a22" stroke="${L}" stroke-width="2.5"/><path d="M53 90 Q60 85 67 90 Q60 94 53 90Z" fill="#e05a6a"/>`
-    : `<circle cx="47" cy="56" r="4.5" fill="${L}"/><circle cx="73" cy="56" r="4.5" fill="${L}"/><circle cx="48.5" cy="54.5" r="1.5" fill="#fff"/><circle cx="74.5" cy="54.5" r="1.5" fill="#fff"/>` +
-      `<path d="M39 46 Q47 41 55 45M65 45 Q73 41 81 46" stroke="${p.hair}" stroke-width="4" fill="none" stroke-linecap="round"/>` +
-      `<path d="M50 83 Q60 93 70 83Z" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
-  const hair = powered
-    ? `<path d="M27 58 L13 40 L28 40 L15 14 L36 26 L33 -8 L50 15 L58 -22 L67 13 L83 -10 L83 24 L105 12 L92 38 L108 42 L93 58 Q90 32 60 30 Q30 32 27 58Z" fill="${gold}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>` +
-      `<path d="M40 24 L50 15 L56 -8 L60 18 L74 6 L72 26 Q60 22 40 24Z" fill="#fff3a6"/>`
-    : `<path d="M28 54 Q22 12 60 13 Q98 12 92 54 Q90 34 78 30 Q62 36 44 30 Q32 34 28 54Z" fill="${p.hair}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>` +
+  const face =
+    `<circle cx="47" cy="56" r="4.5" fill="${L}"/><circle cx="73" cy="56" r="4.5" fill="${L}"/><circle cx="48.5" cy="54.5" r="1.5" fill="#fff"/><circle cx="74.5" cy="54.5" r="1.5" fill="#fff"/>` +
+    `<path d="M39 46 Q47 41 55 45M65 45 Q73 41 81 46" stroke="${p.hair}" stroke-width="4" fill="none" stroke-linecap="round"/>` +
+    (powered
+      ? `<ellipse cx="60" cy="87" rx="8" ry="6" fill="#5a1a22" stroke="${L}" stroke-width="2.5"/>`
+      : `<path d="M50 83 Q60 93 70 83Z" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`);
+  const hair =
+    `<path d="M28 54 Q22 12 60 13 Q98 12 92 54 Q90 34 78 30 Q62 36 44 30 Q32 34 28 54Z" fill="${p.hair}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>` +
       `<path d="M42 31 Q52 21 68 19" stroke="#5a4232" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
   const svg = defs + legs + arms + torso + head + face + hair;
   const vb = powered ? '0 -26 120 246' : '0 0 120 220';
