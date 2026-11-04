@@ -1,0 +1,65 @@
+{
+  "id": "managed-identity-vnet",
+  "order": 11,
+  "title": "Building a Secure Power Platform Architecture with Managed Identity and VNet",
+  "speakers": [
+    "Allan De Castro"
+  ],
+  "date": "2026-10-28",
+  "time": "13:30",
+  "attendedBy": [],
+  "notesFrom": "slides only (Anthony)",
+  "tags": [
+    "security",
+    "managed-identity",
+    "vnet",
+    "plug-ins",
+    "key-vault"
+  ],
+  "summary": "Remove secrets and public paths: managed identity (no secret to steal) and VNet injection (no public path) for Dataverse plug-ins.",
+  "whyItMatters": "Two architecture holes become two manageable operational concerns.",
+  "keyPoints": [
+    {
+      "heading": "The problem",
+      "text": "Every integration must answer who's calling and where traffic goes; common secret-hiding approaches are obfuscation.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Managed identity",
+      "text": "Entra workload identity with federated identity credential and short-lived tokens; user-assigned MI default; Key Vault Secrets User role; FIC tied to environment ID and plug-in cert hash; pac managed-identity (preview).",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "ALM tips",
+      "text": "Pre-pick MI GUID across environments; sign assemblies (CA cert in prod); keep certs in Key Vault/GitHub env secrets; timestamp signatures.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "VNet",
+      "text": "Delegate a subnet; NSG is the boundary (deny internet, allow VirtualNetwork); two VNets in paired regions required; pre-provision (30-60 min recycle); private endpoints and DNS; fail fast to avoid 2-minute timeout.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Not covered by VNet",
+      "text": "Governance (Managed Environments, DLP) and observability (NSG flow logs, App Insights).",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "perspectives": {},
+  "resources": [],
+  "announcements": [],
+  "openQuestions": []
+}

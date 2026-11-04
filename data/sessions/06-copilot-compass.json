@@ -1,0 +1,154 @@
+{
+  "id": "copilot-compass",
+  "order": 6,
+  "title": "The Copilot Compass",
+  "deckTitle": "The Copilot Compass: Finding True North Across Copilot, Cowork, Scout, and Agents",
+  "speakers": [
+    "April Dunnam",
+    "Bryan Wofford"
+  ],
+  "attendedBy": [
+    "gino",
+    "anthony"
+  ],
+  "tags": [
+    "copilot",
+    "cowork",
+    "autopilot",
+    "agents",
+    "licensing",
+    "adoption"
+  ],
+  "summary": "Copilot is one app (Home, Code, Autopilot) with four directions and two meters. Pick the mode by the finish line: Chat to sharpen, Cowork to delegate, Autopilot to monitor, Code/agents to scale.",
+  "whyItMatters": "Choosing the right mode for each job is the difference between productivity and wasted credits.",
+  "keyPoints": [
+    {
+      "heading": "Scout is now Autopilot",
+      "text": "Renamed Sept 25, 2026; moved from a local desktop engine to the cloud with its own identity, memory, and workspace; billed in Copilot Credits; private preview, broad rollout by year end.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "North - Sharpen (Chat)",
+      "text": "In-the-moment thinking; included in the seat license.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "South - Delegate (Cowork)",
+      "text": "Defined deliverable handed back finished; Copilot Credits.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "East - Monitor (Autopilot)",
+      "text": "Ongoing job with no finish line; Copilot Credits.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "West - Scale (Code, Agent Builder, Copilot Studio)",
+      "text": "Whole team does it the same way; cost depends on builder. Build ladder: Code to build, Agent Builder to prove, Copilot Studio to run.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Office apps act now",
+      "text": "Excel plans then builds; PowerPoint builds decks from meetings and files on brand (give it an outline and source data); Word revises with Track Changes; OpenAI and Anthropic models.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Rule of three",
+      "text": "Done it three times by hand? Make it an agent.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Pitfalls",
+      "text": "Swiss Army chatbot, credits on autopilot, human copy-paste middleware, Autopilot with no guardrails, rolling out tools not workflows.",
+      "source": [
+        "gino"
+      ]
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "GCC availability is still an issue.",
+      "Copilot Chat still struggles creating Word/Excel in GCC ('what you remember' column).",
+      "Basic session, aimed at everyday users more than developers."
+    ]
+  },
+  "resources": [
+    "thecopilotcompass.com",
+    "aka.ms/agent-academy",
+    "youtube.com/@AprilDunnam"
+  ],
+  "slidesDir": "assets/slides/copilot-compass",
+  "keySlides": [
+    "slide-10.jpg",
+    "slide-13.jpg",
+    "slide-26.jpg",
+    "slide-38.jpg",
+    "slide-39.jpg"
+  ],
+  "slides": [
+    "slide-01.jpg",
+    "slide-02.jpg",
+    "slide-03.jpg",
+    "slide-04.jpg",
+    "slide-05.jpg",
+    "slide-06.jpg",
+    "slide-07.jpg",
+    "slide-08.jpg",
+    "slide-09.jpg",
+    "slide-10.jpg",
+    "slide-11.jpg",
+    "slide-12.jpg",
+    "slide-13.jpg",
+    "slide-14.jpg",
+    "slide-15.jpg",
+    "slide-16.jpg",
+    "slide-17.jpg",
+    "slide-18.jpg",
+    "slide-19.jpg",
+    "slide-20.jpg",
+    "slide-21.jpg",
+    "slide-22.jpg",
+    "slide-23.jpg",
+    "slide-24.jpg",
+    "slide-25.jpg",
+    "slide-26.jpg",
+    "slide-27.jpg",
+    "slide-28.jpg",
+    "slide-29.jpg",
+    "slide-30.jpg",
+    "slide-31.jpg",
+    "slide-32.jpg",
+    "slide-33.jpg",
+    "slide-34.jpg",
+    "slide-35.jpg",
+    "slide-36.jpg",
+    "slide-37.jpg",
+    "slide-38.jpg",
+    "slide-39.jpg",
+    "slide-40.jpg",
+    "slide-41.jpg",
+    "slide-42.jpg"
+  ],
+  "announcements": [],
+  "openQuestions": []
+}

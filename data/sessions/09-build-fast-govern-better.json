@@ -1,0 +1,119 @@
+{
+  "id": "build-fast-govern-better",
+  "order": 9,
+  "title": "Build Fast, Govern Better",
+  "deckTitle": "Build Fast, Govern Better: The Latest in Power Apps code apps and Copilot Managed Runtime for devs",
+  "speakers": [
+    "Jordan Chodak",
+    "Ryan Jansen",
+    "Austin Laugesen",
+    "Alan Castellanos Moreno"
+  ],
+  "date": "2026-10-29",
+  "time": "12:00",
+  "attendedBy": [
+    "gino"
+  ],
+  "tags": [
+    "code-apps",
+    "copilot-managed-runtime",
+    "governance",
+    "csp",
+    "acp",
+    "licensing"
+  ],
+  "summary": "Writing code is the easy part. The Managed Host closes the gap between AI-generated apps and enterprise-ready ones: build anywhere, IT always governs.",
+  "whyItMatters": "Defines how AI-built apps become governed enterprise apps, and the roadmap for code apps vs CMR.",
+  "keyPoints": [
+    {
+      "heading": "CLI and SDK",
+      "text": "SDK: client library app code calls for connectors/Dataverse/sign-in. CLI: create/connect/publish, inline connections, governance metadata; coding agent plugin with create-app skill.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Code apps updates",
+      "text": "Richer Dataverse integration, embedded Copilot Studio agents, service principal deployments.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Managed Host",
+      "text": "CSP (configured in Microsoft admin center), assets behind Entra-authenticated gateway (~November), hourly Monitor alerts.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Secure by default",
+      "text": "Sharing limits, security groups, connection consent, Advanced Connector Policies (environment or group level in PPAC), CSP, Purview logs; Conditional Access coming.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Code apps next (early 2027)",
+      "text": "Copilot side pane, Cowork hand-off, deep links, biweekly office hours.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "CMR next",
+      "text": "GA; native Cowork integration; integrated data with RBAC (preview); server-side logic (preview) - CMR only, not code apps.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Deployment targets",
+      "text": "New target = copy of production with its own URL (e.g., test), pointable at a different data source.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Code apps or CMR",
+      "text": "Start with either; code apps SDK mostly a subset of CMR. CMR uses Git ALM; end users need Copilot Credits or Power Apps premium.",
+      "source": [
+        "gino"
+      ]
+    }
+  ],
+  "resources": [
+    "aka.ms/ManagedApps",
+    "aka.ms/paCodeApps",
+    "CopilotManagedRuntimeCLI@microsoft.com",
+    "PaCodeApp@microsoft.com"
+  ],
+  "slidesDir": "assets/slides/build-fast-govern-better",
+  "keySlides": [
+    "slide_09.jpg",
+    "slide_10.jpg",
+    "slide_12.jpg",
+    "slide_13.jpg",
+    "slide_14.jpg"
+  ],
+  "slides": [
+    "slide_01.jpg",
+    "slide_02.jpg",
+    "slide_03.jpg",
+    "slide_04.jpg",
+    "slide_05.jpg",
+    "slide_06.jpg",
+    "slide_07.jpg",
+    "slide_08.jpg",
+    "slide_09.jpg",
+    "slide_10.jpg",
+    "slide_11.jpg",
+    "slide_12.jpg",
+    "slide_13.jpg",
+    "slide_14.jpg",
+    "slide_15.jpg"
+  ],
+  "perspectives": {},
+  "announcements": [],
+  "openQuestions": []
+}

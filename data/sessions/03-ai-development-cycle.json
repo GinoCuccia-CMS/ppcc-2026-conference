@@ -1,0 +1,66 @@
+{
+  "id": "ai-development-cycle",
+  "order": 3,
+  "title": "The New AI Development Cycle for Power Platform",
+  "speakers": [
+    "Ben Freedman",
+    "Mike Hughes",
+    "Jared Simmons"
+  ],
+  "host": "Engineer Up",
+  "attendedBy": [
+    "anthony"
+  ],
+  "tags": [
+    "ai-development",
+    "process",
+    "estimation",
+    "testing",
+    "agent-framework"
+  ],
+  "summary": "Building with AI is all about context. Seven practices across discovery, planning, backlog, development, testing, deployment, and best practices, measured with an 'efficiency number'.",
+  "whyItMatters": "Gives a delivery model and a metric for running AI-assisted projects.",
+  "keyPoints": [
+    {
+      "heading": "Context first",
+      "text": "You're building a solution, not a tool. Train a 'second brain' with business, technical, and people context; be selective - accumulation is not knowledge.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "The 7 topics",
+      "text": "Discovery; estimation and planning (AI drafts stories, humans review each); backlog; development (measure, don't guess); testing (audit AI tests, focus on integration/E2E); deployment and ALM (deterministic pipeline, AI for release notes); best practices.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Efficiency number",
+      "text": "(AI costs + people's time + rework) / accepted work. Measure roughly, change one thing at a time.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Microsoft Agent Framework",
+      "text": "Orchestrator giving each agent the right model; successor to Semantic Kernel and AutoGen; multi-provider.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "resources": [
+    "Whitepaper: Build at the Speed of AI: The New Power Platform Development Cycle"
+  ],
+  "perspectives": {
+    "anthony": [
+      "How can we define agent efficiency when building out projects?"
+    ]
+  },
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "announcements": [],
+  "openQuestions": []
+}

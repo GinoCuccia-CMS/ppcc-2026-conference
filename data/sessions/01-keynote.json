@@ -1,0 +1,139 @@
+{
+  "id": "keynote",
+  "order": 1,
+  "title": "Keynote",
+  "speakers": [
+    "Charles Lamanna"
+  ],
+  "date": "2026-10-27",
+  "attendedBy": [
+    "gino",
+    "anthony"
+  ],
+  "tags": [
+    "copilot",
+    "agents",
+    "governance",
+    "copilot-studio",
+    "cost"
+  ],
+  "summary": "Copilot moves from assistant to 'autopilot': agents with their own identity work alongside people, the core platform gets faster, domain experts build their own solutions, and governance and cost management are consolidated in the admin centers.",
+  "whyItMatters": "Sets the direction for the whole platform: Copilot becomes an active participant in work, and governance and cost management are built into the admin experience.",
+  "keyPoints": [
+    {
+      "heading": "Copilot to Autopilot",
+      "text": "Copilot can be embedded in Teams as its own user/account and act on work items.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Performance",
+      "text": "Many performance improvements to the existing platform, not just new features.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Domain experts first",
+      "text": "Enable people who hold the domain knowledge to build their own solutions; Work IQ powers makers inside Power Platform Copilot.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Canvas apps",
+      "text": "Pop-out formulas, Dataverse-optimized, responsive out of the box.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Model-driven apps",
+      "text": "Easier calendar view configuration.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Apps in Copilot",
+      "text": "Build apps inside Copilot, share them, reuse Power Platform connections, access from Copilot Studio; code apps.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Copilot Studio harness",
+      "text": "New harness and UI: 48% less token input, 20% better outcomes; more token efficient across task types.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Agents",
+      "text": "Fully natural language, auto model selection, scheduled triggers, memory of previous runs, own mailbox/identity/OneDrive; can be emailed, chatted with, @mentioned, pulled into meetings, and comment in documents.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "No cliffs between no code and low code",
+      "text": "Agents write the code; Power Automate flows (JSON definitions) can be explained, updated, and diagnosed with GitHub Copilot in VS Code.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Copilot Managed Runtime",
+      "text": "Fully managed platform with governance controls covering DLP, oversight, and security.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Governance in admin center",
+      "text": "Agents overview / agent map, connector settings, Copilot cost management; Power Platform advisory plugin in Cowork answers governance questions in natural language.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "name": "Copilot Studio GitHub Copilot harness",
+      "status": "announced",
+      "notes": "GCC timeline unknown"
+    },
+    {
+      "name": "Agent accounts (identity, mailbox, OneDrive)",
+      "status": "announced"
+    },
+    {
+      "name": "Copilot Managed Runtime",
+      "status": "public preview"
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "GCC: need to know when we get access to the new harness.",
+      "Takeaway: understand customers' domain knowledge before the app spec."
+    ]
+  },
+  "openQuestions": [
+    "How do AI credits get configured?",
+    "What MCP touches Copilot workflows?",
+    "What is 'Governance' / the agent map?",
+    "Which areas got the performance gains?",
+    "What data does Work IQ use, and how is it governed?"
+  ],
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "resources": []
+}

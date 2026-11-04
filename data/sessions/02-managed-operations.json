@@ -1,0 +1,227 @@
+{
+  "id": "managed-operations",
+  "order": 2,
+  "title": "DevOps in Power Platform",
+  "deckTitle": "Managed Operations: Build, Deploy and Operate at Enterprise Scale",
+  "speakers": [
+    "Casey Burke",
+    "Arjun Mayur",
+    "Greg Lindhorst",
+    "Christopher Robbins (Lummus Technology)"
+  ],
+  "date": "2026-10-27",
+  "time": "11:30",
+  "sessionCode": "MS38",
+  "attendedBy": [
+    "gino",
+    "anthony"
+  ],
+  "favorite": [
+    "gino"
+  ],
+  "tags": [
+    "alm",
+    "devops",
+    "github",
+    "pipelines",
+    "monitor",
+    "copilot-managed-runtime",
+    "approvals"
+  ],
+  "summary": "ALM shifts from moving Dataverse solutions between environments to moving Git-backed project commits through dev/test/prod stages, with built-in approvals and much faster operational alerting through Monitor.",
+  "whyItMatters": "The most actionable session for delivery teams: agentic development has outpaced review capacity, so Microsoft is investing in Git-backed ALM, deployment approvals, and Monitor.",
+  "keyPoints": [
+    {
+      "heading": "Generally available",
+      "text": "Power Platform Pipelines, default pipelines per environment group, native Git integration (GitHub now in preview alongside Azure DevOps), and Monitor.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Customer spotlight",
+      "text": "Lummus Technology: 4 people managing 50 projects. Agents assist dev/test/review, engineers approve; deployments auto-draft release notes, training videos (Playwright), and SharePoint pages for owner review; App Insights + agent-proposed fixes.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Project = Repo",
+      "text": "A project is one Git repo that builds and deploys as a unit; one directory per component with ms.project.config.json at root and ms.config.json per app. Apps only for now; agents and data later.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Stages",
+      "text": "Dev (every commit runnable, authors only), Test (optional, invited audience), Prod (single live deployment).",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Single-environment ALM by default",
+      "text": "~80% of apps keep all stages in the maker's personal environment, ~15% in a shared team environment, ~5% need multi-environment ALM (preview end of year).",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Config overrides",
+      "text": "Per-target override files (e.g., ms.prod.config.json); project variables replace environment variables; connection references overridable per component.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Repos",
+      "text": "Out-of-the-box repos by default; GitHub Enterprise native integration (Microsoft Managed Apps GitHub App); bring-your-own Git with service principal auth.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Approvals",
+      "text": "Roles: Project Owner, Contributor or Agent, Approver. Approve via CLI, email, or in-product portal; works with agentic tools via skills; service principals supported.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Monitor",
+      "text": "Alerts evaluated hourly instead of daily; 'When an alert fires' trigger (Power Platform for Admins V2) routes alerts to Teams / Azure DevOps; export beyond 30-day retention via REST API / PAC CLI in OpenTelemetry format; Power Pages site metrics.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Autonomous ops demo",
+      "text": "Alert webhook creates a GitHub issue; GitHub Actions start agents that inspect the commit, propose and test a fix, then deploy.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "name": "CMR projects and stages",
+      "status": "public preview",
+      "eta": "End of November 2026"
+    },
+    {
+      "name": "Multi-environment CMR ALM",
+      "status": "public preview",
+      "eta": "End of 2026"
+    },
+    {
+      "name": "CMR deployment approvals",
+      "status": "coming soon"
+    },
+    {
+      "name": "Hourly Monitor alerts",
+      "status": "public preview",
+      "eta": "Mid-November 2026"
+    },
+    {
+      "name": "Alert routing trigger",
+      "status": "public preview",
+      "eta": "End of November 2026"
+    },
+    {
+      "name": "Monitor metric export",
+      "status": "public preview",
+      "eta": "End of November 2026"
+    },
+    {
+      "name": "Power Pages site health metrics",
+      "status": "public preview",
+      "eta": "End of November 2026"
+    },
+    {
+      "name": "Pipelines GitHub support",
+      "status": "preview"
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "Is CMR even available in our (GCC) environment?",
+      "Most Copilot-built apps will live in personal environments; add test/prod as apps become mission-critical.",
+      "We use code apps in GitHub with a Power Platform config file for environment requirements and datasets; compare with new project config files.",
+      "No deployment approvals today: go/no-go for MVP, TAs push via pipelines; migrating to pipelines host with service principal deployments.",
+      "Need to learn Monitor in our GCC tenant."
+    ]
+  },
+  "openQuestions": [
+    "Does the URL drive prod vs test in CMR?",
+    "Full list of CMR roles (Creator, Developer, Read-only?)"
+  ],
+  "resources": [
+    "aka.ms/SourceCodeIntegration",
+    "aka.ms/MonitoringHub"
+  ],
+  "slidesDir": "assets/slides/managed-operations",
+  "keySlides": [
+    "slide-24.jpg",
+    "slide-27.jpg",
+    "slide-30.jpg",
+    "slide-38.jpg",
+    "slide-42.jpg"
+  ],
+  "slides": [
+    "slide-01.jpg",
+    "slide-02.jpg",
+    "slide-03.jpg",
+    "slide-04.jpg",
+    "slide-05.jpg",
+    "slide-06.jpg",
+    "slide-07.jpg",
+    "slide-08.jpg",
+    "slide-09.jpg",
+    "slide-10.jpg",
+    "slide-11.jpg",
+    "slide-12.jpg",
+    "slide-13.jpg",
+    "slide-14.jpg",
+    "slide-15.jpg",
+    "slide-16.jpg",
+    "slide-17.jpg",
+    "slide-18.jpg",
+    "slide-19.jpg",
+    "slide-20.jpg",
+    "slide-21.jpg",
+    "slide-22.jpg",
+    "slide-23.jpg",
+    "slide-24.jpg",
+    "slide-25.jpg",
+    "slide-26.jpg",
+    "slide-27.jpg",
+    "slide-28.jpg",
+    "slide-29.jpg",
+    "slide-30.jpg",
+    "slide-31.jpg",
+    "slide-32.jpg",
+    "slide-33.jpg",
+    "slide-34.jpg",
+    "slide-35.jpg",
+    "slide-36.jpg",
+    "slide-37.jpg",
+    "slide-38.jpg",
+    "slide-39.jpg",
+    "slide-40.jpg",
+    "slide-41.jpg",
+    "slide-42.jpg",
+    "slide-43.jpg",
+    "slide-44.jpg",
+    "slide-45.jpg",
+    "slide-46.jpg",
+    "slide-47.jpg",
+    "slide-48.jpg"
+  ]
+}

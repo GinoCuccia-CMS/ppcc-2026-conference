@@ -1,0 +1,183 @@
+{
+  "id": "github-copilot-harness",
+  "order": 4,
+  "title": "Beyond the Basics: the GitHub Copilot Harness",
+  "speakers": [
+    "Giorgio Ughini",
+    "Alicja Gilderdale",
+    "Roel Schenk"
+  ],
+  "date": "2026-10-27",
+  "attendedBy": [
+    "gino",
+    "anthony"
+  ],
+  "tags": [
+    "copilot-studio",
+    "agents",
+    "workflows",
+    "skills",
+    "hooks",
+    "memory"
+  ],
+  "summary": "Copilot Studio agents now run on the GitHub Copilot harness (continuous think-act-observe loop). Re-architect agents rather than port them; Workflows replace agent flows.",
+  "whyItMatters": "Existing agents should be re-architected, and Workflows give predictable cost and control for processes with a known path.",
+  "keyPoints": [
+    {
+      "heading": "Standard vs GHCP harness",
+      "text": "Standard: plan then execute. GHCP: continuous thought-action-observation-decide loop from the latest state.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Don't port, re-architect",
+      "text": "Topics, variables, Power Fx, child agents, Adaptive Cards, agent flows give way to skills, memory, hooks, workflows; knowledge, tools, code execution, connected agents carry over.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Agents vs workflows",
+      "text": "Agents when the path is agile; workflows when start/end are known with AI where judgment is needed. They can call each other.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Instructions",
+      "text": "Always loaded; GHCP agents follow them closely. Only include what matters every turn; otherwise use a Skill.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Skills",
+      "text": "SKILL.md + resources loaded on demand. Avoid vague descriptions, mega-skills, fact dumps, unreviewed community skills.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Knowledge and tools",
+      "text": "Knowledge (SharePoint, OneDrive, files, sites, ServiceNow, Confluence); tools (MCP, connectors, Work IQ). SharePoint: search, rank, fetch full files into sandbox.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Agent sandbox",
+      "text": "Isolated Linux/Python workspace for code, charts, Office/PDF files; no outbound internet; DLP still applies.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Hooks",
+      "text": "Power Automate workflow runs at lifecycle events (SessionStart, PreTool, PostTool, PostToolFailure, AgentStop) and can allow/deny next action.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Memory",
+      "text": "Per user, per agent; users can view/delete; not shared across users.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Connected agents",
+      "text": "Task agents only; memory is not passed agent to agent.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Workflows",
+      "text": "Cloud flow -> agent flow -> workflow. Run in Copilot Studio; triggers, AI nodes (classification, inline/published agents, M365 Copilot, document extract), connectors, functions, human input, code execution (planned), flow control. Prompt nodes become inline agents. Predictable cost.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Human-in-the-loop",
+      "text": "By design (approvals, forms, adaptive cards, email options) or by judgement (agent requests assistance).",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Demo",
+      "text": "Strategic intelligence code app: workflow trigger -> agent plans -> workflow researches -> agent writes report -> human approves.",
+      "source": [
+        "gino"
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "name": "Copilot Studio Gallery",
+      "status": "launched",
+      "notes": "microsoft.github.io/copilot-studio-gallery"
+    },
+    {
+      "name": "Workflows in Copilot Studio",
+      "status": "available",
+      "notes": "GCC availability unknown"
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "We consistently get requests prime for workflows, but workflows seem unavailable in GCC.",
+      "Need a timeline to decide whether to wait or build in the legacy harness."
+    ]
+  },
+  "resources": [
+    "microsoft.github.io/copilot-studio-gallery",
+    "github.com/alicja-gilderdale/strategic-intelligence-operations-agent"
+  ],
+  "slidesDir": "assets/slides/github-copilot-harness",
+  "keySlides": [
+    "slide_01.jpg",
+    "slide_13.jpg",
+    "slide_16.jpg",
+    "slide_19.jpg"
+  ],
+  "slides": [
+    "slide_01.jpg",
+    "slide_02.jpg",
+    "slide_03.jpg",
+    "slide_04.jpg",
+    "slide_05.jpg",
+    "slide_06.jpg",
+    "slide_07.jpg",
+    "slide_08.jpg",
+    "slide_09.jpg",
+    "slide_10.jpg",
+    "slide_11.jpg",
+    "slide_12.jpg",
+    "slide_13.jpg",
+    "slide_14.jpg",
+    "slide_15.jpg",
+    "slide_16.jpg",
+    "slide_17.jpg",
+    "slide_18.jpg",
+    "slide_19.jpg",
+    "slide_20.jpg",
+    "slide_21.jpg",
+    "slide_22.jpg"
+  ],
+  "openQuestions": []
+}

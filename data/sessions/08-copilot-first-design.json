@@ -1,0 +1,43 @@
+{
+  "id": "copilot-first-design",
+  "order": 8,
+  "title": "Copilot-First Design: Smarter Power Apps Solutions with Plans and Generative Pages",
+  "speakers": [
+    "Ashley Steiner"
+  ],
+  "date": "2026-10-28",
+  "time": "14:00",
+  "attendedBy": [
+    "anthony"
+  ],
+  "tags": [
+    "plans",
+    "generative-pages",
+    "citizen-developer"
+  ],
+  "summary": "Plans (formerly Plan designer) scaffolds tables and apps from requirements using four agents; no flows or agents.",
+  "whyItMatters": "Useful for scoping, not production builds.",
+  "keyPoints": [
+    {
+      "heading": "Plans",
+      "text": "From requirements: business problem, personas, processes, data model, components, solution page. Uses 4 agents; no flows or agents generated.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "Available in GCC but uses non-FedRAMP-approved sources.",
+      "Citizen developer tool, not production.",
+      "Could help customers scope a problem before engaging us, or inspire our own scoping agent.",
+      "Overall session was poor; we weren't the target audience."
+    ]
+  },
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "resources": [],
+  "announcements": [],
+  "openQuestions": []
+}

@@ -1,0 +1,121 @@
+{
+  "id": "full-stack-code-apps",
+  "order": 5,
+  "title": "Full Stack with Code Apps",
+  "speakers": [
+    "Tomas Prokop (TALXIS)"
+  ],
+  "date": "2026-10-28",
+  "attendedBy": [
+    "gino",
+    "anthony"
+  ],
+  "tags": [
+    "code-apps",
+    "ai-coding",
+    "architecture",
+    "sandbox",
+    "skills"
+  ],
+  "summary": "More code, more problems. How to give makers AI coding tools safely, and how the data boundary decides between Copilot Managed Runtime, Power Platform + Dataverse, and Azure.",
+  "whyItMatters": "Provides a decision rule and safety model for AI-generated apps.",
+  "keyPoints": [
+    {
+      "heading": "Less code, fewer problems",
+      "text": "Keep code small; hand off what you can to Microsoft; low code uses few primitives.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Three loops",
+      "text": "Inner (implement/build/deploy/test), outer (integrate/validate/release/manage), security (monitor/detect/protect/harden).",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Five layers of an AI coding tool",
+      "text": "Model, context, harness (e.g., GitHub Copilot, Claude Code), runtime (local or cloud container like Codespaces), client (frontend).",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Instructions are a wish, not a rule",
+      "text": "AGENTS.md always on; skills/MCP/plugins loaded when needed; TALXIS skills repo as an alternative.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Hosts",
+      "text": "Power Pages, model-driven, canvas, code apps; primary choice model-driven with PCF; push business logic into Dataverse (plug-ins, custom APIs).",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Build in layers",
+      "text": "Data model -> logic -> security -> UI.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Data boundary decides",
+      "text": "Public/non-classified, no audit: CMR. Must contain and audit: Power Platform + Dataverse. Can't host: Azure. Don't mix: frontend and backend drift.",
+      "source": [
+        "gino",
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Code apps",
+      "text": "Power Apps SDK (@microsoft/power-apps), generated data services, power.config.json, Power Apps host; code lives in GitHub; admins govern via CSP.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Deployment",
+      "text": "End-to-end CI/CD with GitHub PR workflows.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "resources": [
+    "talxis.com/lab"
+  ],
+  "slidesDir": "assets/slides/full-stack-code-apps",
+  "keySlides": [
+    "slide_05.jpg",
+    "slide_07.jpg",
+    "slide_13.jpg",
+    "slide_14.jpg"
+  ],
+  "slides": [
+    "slide_01.jpg",
+    "slide_02.jpg",
+    "slide_03.jpg",
+    "slide_04.jpg",
+    "slide_05.jpg",
+    "slide_06.jpg",
+    "slide_07.jpg",
+    "slide_08.jpg",
+    "slide_09.jpg",
+    "slide_10.jpg",
+    "slide_11.jpg",
+    "slide_12.jpg",
+    "slide_13.jpg",
+    "slide_14.jpg"
+  ],
+  "perspectives": {},
+  "announcements": [],
+  "openQuestions": []
+}

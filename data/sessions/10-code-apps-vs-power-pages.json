@@ -1,0 +1,79 @@
+{
+  "id": "code-apps-vs-power-pages",
+  "order": 10,
+  "title": "Anything You Can Code, I Can Code Better: Code Apps vs Power Pages",
+  "speakers": [
+    "Ulrikke Akerbæk",
+    "Scott Durow"
+  ],
+  "attendedBy": [
+    "gino"
+  ],
+  "tags": [
+    "copilot-managed-runtime",
+    "power-pages",
+    "spa",
+    "alm",
+    "comparison"
+  ],
+  "summary": "Head-to-head build of a workplace accommodation survey app as a Managed Runtime App (MRA) and a Power Pages SPA across four rounds.",
+  "whyItMatters": "Clearest decision rule: external users -> Power Pages; internal AI-built apps with Git ALM -> MRA.",
+  "keyPoints": [
+    {
+      "heading": "MRA",
+      "text": "Safe place for AI to build with governance set; build in Copilot Studio Apps, Cowork (/app skill), GitHub Copilot, Claude Code, VS Code; uses environments for governance and billing; can connect to data in another environment; inventory in admin portal only. Code apps are the 'grandfather'.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Power Pages SPA",
+      "text": "Single-page site; styling lives in the React code.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Round 1 - Build and navigate",
+      "text": "SPA has unique URLs per view; MRA supports deep links.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Round 2 - Solutions and deployment",
+      "text": "SPA is solution-aware (normal pipelines); MRA is not - uses Git repos, pro-dev ALM; URL selects version, local, or prod.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Round 3 - Data",
+      "text": "SPA: Dataverse Web API, Power Automate for anything else. MRA: any connector, custom Dataverse API, custom web API, Dataverse security.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "Round 4 - Server-side",
+      "text": "SPA has server-side logic; MRA sync calls have a 2-minute limit, use async for long work; both send telemetry.",
+      "source": [
+        "gino"
+      ]
+    },
+    {
+      "heading": "How to decide",
+      "text": "External users -> Power Pages. Browser dependency is a consideration.",
+      "source": [
+        "gino"
+      ]
+    }
+  ],
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "perspectives": {},
+  "resources": [],
+  "announcements": [],
+  "openQuestions": []
+}

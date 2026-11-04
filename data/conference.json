@@ -1,0 +1,348 @@
+{
+  "name": "Power Platform Community Conference 2026",
+  "shortName": "PPCC 2026",
+  "location": "Las Vegas, NV",
+  "dates": {
+    "start": "2026-10-27",
+    "end": "2026-10-29"
+  },
+  "contributors": {
+    "gino": {
+      "name": "Gino Cuccia"
+    },
+    "anthony": {
+      "name": "Anthony"
+    }
+  },
+  "classification": "Internal use only. Contains Microsoft slide images, some marked Microsoft Confidential, and customer-specific (CMS) observations.",
+  "stats": {
+    "powerPlatformMAU": "~80 million (up from 56 million)"
+  },
+  "themes": [
+    {
+      "id": "autopilot",
+      "title": "From assistant to autopilot",
+      "text": "Agents with their own identity, mailbox, memory, schedules; Scout rebuilt as cloud Autopilot."
+    },
+    {
+      "id": "workflows",
+      "title": "Workflows replace agent flows",
+      "text": "Deterministic steps plus AI nodes, inline agents, human approvals; predictable cost and guardrails."
+    },
+    {
+      "id": "cmr",
+      "title": "Copilot Managed Runtime: build anywhere, IT governs",
+      "text": "Managed host enforcing Entra, sharing limits, ACP, CSP, Purview, approvals."
+    },
+    {
+      "id": "alm",
+      "title": "Simpler, Git-first ALM",
+      "text": "Project = repo; stages not environments; ~80% of apps stay in one environment; GitHub support."
+    },
+    {
+      "id": "operate",
+      "title": "Operate with visibility",
+      "text": "Hourly alerts, alert routing, export, Power Pages health, agent inventory."
+    },
+    {
+      "id": "cost",
+      "title": "Consumption-based cost",
+      "text": "Seat covers Chat; Cowork, Code, Autopilot, CMR use Copilot Credits; AI Builder seeded credits ended Nov 1, 2026."
+    },
+    {
+      "id": "gcc",
+      "title": "GCC availability is the gating question",
+      "text": "Most major announcements need a GCC timeline before we can plan around them.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "id": "domain",
+      "title": "Domain knowledge comes first",
+      "text": "Understand customer domain knowledge before the app spec.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Governance and security consolidating",
+      "text": "Security Hub, ACP replacing DLP, tenant isolation, VNet, managed identity.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "Allocate Copilot Credits and set spend caps per environment",
+      "priority": "High",
+      "timing": "Now"
+    },
+    {
+      "action": "Review Advanced Connector Policies and CSP settings",
+      "priority": "High",
+      "timing": "30 days"
+    },
+    {
+      "action": "Enable hourly Monitor alerts routed to Teams / Azure DevOps",
+      "priority": "High",
+      "timing": "When preview lands (Nov)"
+    },
+    {
+      "action": "Pilot one CMR project with single-environment ALM + GitHub",
+      "priority": "Medium",
+      "timing": "Q1 2027"
+    },
+    {
+      "action": "Inventory agent flows / autonomous agents for Workflow migration",
+      "priority": "Medium",
+      "timing": "Q1 2027"
+    },
+    {
+      "action": "Publish maker standards: AGENTS.md, approved skills, data-boundary guidance",
+      "priority": "Medium",
+      "timing": "Q1 2027"
+    },
+    {
+      "action": "Train staff on the Copilot Compass",
+      "priority": "Medium",
+      "timing": "Ongoing"
+    },
+    {
+      "action": "Attend CMR and code apps office hours",
+      "priority": "Low",
+      "timing": "Nov-Dec 2026"
+    }
+  ],
+  "platformComparison": {
+    "columns": [
+      "Copilot Managed Runtime",
+      "Power Apps code apps",
+      "Power Pages SPA"
+    ],
+    "rows": [
+      {
+        "question": "Best for",
+        "values": [
+          "Internal apps built with AI tools; public or non-classified data",
+          "Internal pro-code apps needing Dataverse ALM",
+          "External-facing users and sites"
+        ]
+      },
+      {
+        "question": "ALM model",
+        "values": [
+          "Git repo, stages",
+          "Dataverse solutions",
+          "Dataverse solutions"
+        ]
+      },
+      {
+        "question": "Data access",
+        "values": [
+          "Any connector, custom APIs",
+          "Connectors via Power Apps SDK",
+          "Dataverse Web API; Power Automate"
+        ]
+      },
+      {
+        "question": "Server-side logic",
+        "values": [
+          "Coming (preview)",
+          "Not planned",
+          "Yes"
+        ]
+      },
+      {
+        "question": "Licensing",
+        "values": [
+          "Copilot Credits or Power Apps premium",
+          "Power Apps premium",
+          "Power Pages licensing"
+        ]
+      },
+      {
+        "question": "Status",
+        "values": [
+          "Public preview",
+          "Generally available",
+          "Generally available"
+        ]
+      }
+    ]
+  },
+  "keyDates": [
+    {
+      "date": "2026-11-01",
+      "item": "Seeded AI Builder credits ended"
+    },
+    {
+      "date": "2026-11-04",
+      "item": "CMR office hours 10:00-10:30 AM PT"
+    },
+    {
+      "date": "2026-11-11",
+      "item": "Code apps office hours 10:00-10:30 AM PT"
+    },
+    {
+      "date": "2026-11-15",
+      "approx": true,
+      "item": "Hourly Monitor alerts (public preview, mid-November)"
+    },
+    {
+      "date": "2026-11-30",
+      "approx": true,
+      "item": "CMR projects & stages, alert routing, Monitor export, Power Pages health (public previews)"
+    },
+    {
+      "date": "2026-12-02",
+      "item": "CMR office hours"
+    },
+    {
+      "date": "2026-12-09",
+      "item": "Code apps office hours"
+    },
+    {
+      "date": "2026-12-31",
+      "approx": true,
+      "item": "Multi-environment CMR ALM preview; Autopilot broad rollout"
+    },
+    {
+      "date": "2027-03-31",
+      "approx": true,
+      "item": "Code apps: Copilot side pane, Cowork hand-off, deep links (early 2027)"
+    }
+  ],
+  "openQuestions": [
+    {
+      "question": "How are AI credits configured?",
+      "answer": "PPAC > Licensing > Copilot Studio > Manage Copilot Credits: allocate per environment, overage, per-agent limits, alerts. Seeded AI Builder credits ended Nov 1, 2026.",
+      "status": "confirmed",
+      "sources": [
+        "https://learn.microsoft.com/power-platform/admin/manage-copilot-studio-messages-capacity",
+        "https://learn.microsoft.com/en-us/ai-builder/endofaibcredits"
+      ]
+    },
+    {
+      "question": "What is 'Governance' in the keynote?",
+      "answer": "Admin-center controls: agent governance in PPAC, publishing controls in M365 admin center, audit in Purview; Inventory under Manage > Inventory.",
+      "status": "confirmed",
+      "sources": [
+        "https://powertricks.io/copilot-studio-governance/"
+      ]
+    },
+    {
+      "question": "What is the agent map?",
+      "answer": "Appears to be an M365 admin center agent view including unmanaged agents; requirements reported only by third parties.",
+      "status": "unconfirmed",
+      "sources": [
+        "https://www.orchestry.com/insight/m365-agent-inventory"
+      ]
+    },
+    {
+      "question": "What MCP touches Copilot workflows?",
+      "answer": "Workflows can call MCP-compliant tools/knowledge servers as steps (GA July 15, 2026).",
+      "status": "partially confirmed",
+      "sources": [
+        "https://mc.merill.net/message/MC1471573"
+      ]
+    },
+    {
+      "question": "Does the URL drive prod vs test in CMR?",
+      "answer": "Each app has preview and live URLs; deploy promotes a build to live; stage targets are an opt-in CLI preview; new targets get their own URL.",
+      "status": "partially confirmed",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop?view=o365-worldwide"
+      ]
+    },
+    {
+      "question": "What CMR roles exist?",
+      "answer": "Deck: Project Owner, Contributor/Agent, Approver. Creator, Developer, Read-only noted in demo only.",
+      "status": "unconfirmed",
+      "sources": []
+    }
+  ],
+  "followUps": {
+    "gccAvailability": [
+      "Copilot Studio GitHub Copilot harness and agent accounts",
+      "Copilot Studio workflows: wait or build in legacy harness?",
+      "Copilot Managed Runtime",
+      "Pipelines GitHub support and new Monitor features",
+      "Work IQ (GCC / GCC High) and licensing",
+      "Cowork, Autopilot, new in-app Copilot features",
+      "Security Hub",
+      "Advanced connector policies and API",
+      "Plug-in managed identity"
+    ],
+    "teamActions": [
+      "Learn Monitor in our GCC tenant",
+      "Get the Power Platform advisory plugin for governance team",
+      "Check for Power Platform admin plugin for Cowork",
+      "Check Defender license for threat detection"
+    ],
+    "openQuestions": [
+      "Which areas got the performance gains?",
+      "What data does Work IQ use, and how is it governed?",
+      "How do we pair domain-expert makers with governance?",
+      "Does Power Pages site health apply to SPA sites?",
+      "How can we define agent efficiency when building out projects?",
+      "How do developers get access to customer domain knowledge?"
+    ],
+    "source": [
+      "anthony"
+    ]
+  },
+  "resources": [
+    {
+      "label": "Copilot Managed Runtime docs",
+      "url": "https://aka.ms/ManagedApps"
+    },
+    {
+      "label": "Power Apps code apps docs",
+      "url": "https://aka.ms/paCodeApps"
+    },
+    {
+      "label": "Git source code integration",
+      "url": "https://aka.ms/SourceCodeIntegration"
+    },
+    {
+      "label": "Monitoring hub",
+      "url": "https://aka.ms/MonitoringHub"
+    },
+    {
+      "label": "Copilot Studio Gallery",
+      "url": "https://microsoft.github.io/copilot-studio-gallery"
+    },
+    {
+      "label": "Strategic intelligence demo solution",
+      "url": "https://github.com/alicja-gilderdale/strategic-intelligence-operations-agent"
+    },
+    {
+      "label": "TALXIS lab",
+      "url": "https://talxis.com/lab"
+    },
+    {
+      "label": "Agent Academy",
+      "url": "https://aka.ms/agent-academy"
+    },
+    {
+      "label": "The Copilot Compass",
+      "url": "https://thecopilotcompass.com"
+    }
+  ],
+  "sessions": [
+    "keynote",
+    "managed-operations",
+    "ai-development-cycle",
+    "github-copilot-harness",
+    "full-stack-code-apps",
+    "copilot-compass",
+    "security-advisor",
+    "copilot-first-design",
+    "build-fast-govern-better",
+    "code-apps-vs-power-pages",
+    "managed-identity-vnet"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "security-advisor",
+  "order": 7,
+  "title": "Power Platform Security and Advisor",
+  "speakers": [],
+  "attendedBy": [
+    "anthony"
+  ],
+  "tags": [
+    "security",
+    "governance",
+    "acp",
+    "dlp",
+    "vnet",
+    "defender"
+  ],
+  "summary": "Managed security for Power Platform: Security Hub, advanced connector policies replacing DLP, customer-managed keys, VNet, tenant isolation, Defender for Copilot Studio, and compliance.",
+  "whyItMatters": "Governance and security tooling is consolidating; ACP replaces DLP.",
+  "keyPoints": [
+    {
+      "heading": "Managed platform pillars",
+      "text": "Managed security (CISO), governance (CIO), operations, transformation (CAIO).",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Security Hub",
+      "text": "Single pane of glass: proactive rules, recommendations, safe defaults, risk prioritization. Hierarchy: Security Hub > environment groups > environments.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Advanced connector policies",
+      "text": "Replacing DLP; control individual connector actions (e.g., Dataverse read not write); environments and groups; extends to MCP servers/tools.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Data protection",
+      "text": "Customer-managed keys with rotation and private link; Azure VNet injection for plug-ins and selected connectors; agent knowledge and privacy controls.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Identity and access",
+      "text": "IP firewall, tenant isolation (default on for new tenants since April 2026), IP cookie binding, sharing limits and environment routing, app access control, require Entra ID for agents.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Threat detection",
+      "text": "Microsoft Defender for Copilot Studio (prompt injection protection; requires license); turn off embedded maker credentials.",
+      "source": [
+        "anthony"
+      ]
+    },
+    {
+      "heading": "Compliance",
+      "text": "Auditing to Purview, Customer Lockbox; Power Pages is the only product in Security Hub today.",
+      "source": [
+        "anthony"
+      ]
+    }
+  ],
+  "perspectives": {
+    "anthony": [
+      "Does Security Hub exist in GCC?",
+      "When is ACP coming to GCC, and is there an API?",
+      "We don't provision developer environments today; user base is all premium licensed.",
+      "Auditing already configured.",
+      "Check Defender license."
+    ]
+  },
+  "slides": [],
+  "keySlides": [],
+  "slidesDir": null,
+  "resources": [],
+  "announcements": [],
+  "openQuestions": []
+}
