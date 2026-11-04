@@ -1,4 +1,4 @@
-﻿# PPCC 2026 Conference Knowledge Base
+# PPCC 2026 Conference Knowledge Base
 
 > **Internal use only.** Contains Microsoft slide images (some marked *Microsoft Confidential*) and customer-specific observations. Keep this repository **private**.
 
@@ -67,7 +67,7 @@ Load data with a static import (e.g., `import conference from '../data/conferenc
 
 `conference-quest-app/` is a just-for-fun retro game version of these notes, rebuilt from a Claude Design prototype. Gino and Anthony walk the conference hallway. Each of the 11 sessions is a classroom deck built from `data/sessions/*.json`, with key points, announcements, key slide photos, perspectives and open questions. An expo hall built from `data/conference.json` sums up the big takeaways and is open from the start. The "boring document" option downloads `docs/PPCC 2026 Conference Summary.docx`.
 
-- Environment: **CMS default (GCC)**, solution **PowerPlatformConference2026**
-- Maker portal: https://make.gov.powerapps.us/environments/Default-fbdcedc1-70a9-414b-bfa5-c3063fc3395e/solutions/44a94f67-dfd7-f111-a05a-001dd811b7f9
+- Environment: **CMS GCC environment `7fcc0894-ec6a-e4d1-b469-ef0e332e484d`**, solution **PowerPlatformConference**
+- Maker portal: https://make.gov.powerapps.us/environments/7fcc0894-ec6a-e4d1-b469-ef0e332e484d/solutions/0415d2f0-66d8-f111-a05c-001dd80fdbaa
 - Content comes straight from `data/` and `docs/` at build time. Edit the JSON (or `scripts/make_data.py`), then rebuild and push.
 - Build and deploy steps, decisions and IDs: [conference-quest-app/memory-bank.md](conference-quest-app/memory-bank.md)

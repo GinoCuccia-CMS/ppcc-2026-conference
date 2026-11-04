@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "appId": null,
+  "appId": "3235b494-4954-42b1-9243-300b5b92d8d2",
   "appDisplayName": "Conference Quest",
   "region": "gccmoderate",
   "appType": "CodeApp",
-  "environmentId": "Default-fbdcedc1-70a9-414b-bfa5-c3063fc3395e",
+  "environmentId": "7fcc0894-ec6a-e4d1-b469-ef0e332e484d",
   "description": "Retro game-style tour of the PPCC 2026 session notes (Gino + Anthony).",
   "buildPath": "./dist",
   "buildEntryPoint": "index.html",

@@ -1,4 +1,4 @@
-﻿# Conference Quest – Memory Bank
+# Conference Quest – Memory Bank
 
 ## Project
 
@@ -6,10 +6,11 @@
 - App name: Conference Quest (Power Apps code app, Vite + React + TypeScript, no Fluent UI)
 - Source design: Claude Design project "Conference Quest" (`Conference Quest.dc.html` + `support.js`, zip in Gino's Downloads). Rebuilt here as plain React; `support.js` is not used.
 - Data: bundled at build time from `../data/sessions/*.json` and `../data/conference.json` (no Dataverse, no connectors).
-- Environment: **CMS default environment (GCC / usgov)** - id `Default-fbdcedc1-70a9-414b-bfa5-c3063fc3395e`, `https://orgcc31b0b6.crm9.dynamics.com/`
-- Solution: **PowerPlatformConference2026** - id `44a94f67-dfd7-f111-a05a-001dd811b7f9`
-- App id: assigned on first successful push (power.config.json appId is null)
-- Maker URL: https://make.gov.powerapps.us/environments/Default-fbdcedc1-70a9-414b-bfa5-c3063fc3395e/solutions/44a94f67-dfd7-f111-a05a-001dd811b7f9
+- Environment: **CMS GCC environment (usgov)** - id `7fcc0894-ec6a-e4d1-b469-ef0e332e484d` (the default env blocks code apps)
+- Solution: **PowerPlatformConference** - id `0415d2f0-66d8-f111-a05c-001dd80fdbaa`
+- App id: `3235b494-4954-42b1-9243-300b5b92d8d2` (first pushed 2026-11-04)
+- Play URL: https://apps.gov.powerapps.us/play/e/7fcc0894-ec6a-e4d1-b469-ef0e332e484d/app/3235b494-4954-42b1-9243-300b5b92d8d2?tenantId=fbdcedc1-70a9-414b-bfa5-c3063fc3395e
+- Maker URL: https://make.gov.powerapps.us/environments/7fcc0894-ec6a-e4d1-b469-ef0e332e484d/solutions/0415d2f0-66d8-f111-a05c-001dd80fdbaa
 - CLI: grouped `pa` (`@microsoft/power-apps-cli` 1.1.0, dev dependency). Run as `npx --no-install pa …`. Signed in as gino.cuccia@cms.hhs.gov via `pa auth login --cloud usgov`. Default env hostnames need the `Default-` prefix on the env id, and `NODE_USE_SYSTEM_CA=1` for the CMS proxy.
 
 ## Decisions
@@ -51,9 +52,9 @@
 The Browser pane's `preview_start` read the old OneDrive RecipeApp launch.json in this session, so the dev server was started directly:
 `node conference-quest-app/node_modules/vite/bin/vite.js conference-quest-app --port 5200 --strictPort` (from the repo root) → http://localhost:5200. A `.claude/launch.json` entry `conference-quest` exists for new sessions opened on this repo.
 
-## Blocker (2026-11-04)
+## Default environment note (2026-11-04)
 
-Push to the CMS default environment returns 403 CodeAppOperationNotAllowedInEnvironment. An environment admin must enable Code apps (Power Platform admin center > environment > Settings > Product > Features) before `pa app push` works.
+Push to the CMS default environment returns 403 CodeAppOperationNotAllowedInEnvironment. An environment admin must enable Code apps (Power Platform admin center > environment > Settings > Product > Features) before `pa app push` works there, so the app was deployed to environment 7fcc0894-... instead.
 
 ## Open items / to test in the player
 
@@ -65,7 +66,7 @@ Push to the CMS default environment returns 403 CodeAppOperationNotAllowedInEnvi
 ```bash
 npx eslint src
 npm run build
-npx --no-install pa app push --non-interactive -s 44a94f67-dfd7-f111-a05a-001dd811b7f9
+npx --no-install pa app push --non-interactive -s 0415d2f0-66d8-f111-a05c-001dd80fdbaa
 ```
 
 ## Lessons learned
