@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "conference-quest",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["conference-quest-app/node_modules/vite/bin/vite.js", "conference-quest-app", "--port", "5200", "--strictPort"],
+      "port": 5200
+    }
+  ]
+}

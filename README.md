@@ -50,7 +50,7 @@ Each `data/sessions/*.json` file:
 | 7 | Power Platform Security and Advisor | Anthony | – |
 | 8 | Copilot-First Design: Plans and Generative Pages | Anthony | – |
 | 9 | Build Fast, Govern Better | Gino | 15 |
-| 10 | Code Apps vs Power Pages | Gino | – |
+| 10 | Managed Run Apps vs Power Pages | Gino | – |
 | 11 | Managed Identity and VNet (slides only) | – | – |
 
 ## Ideas for the code app
@@ -62,3 +62,12 @@ Each `data/sessions/*.json` file:
 - Platform chooser: interactive version of `platformComparison`
 
 Load data with a static import (e.g., `import conference from '../data/conference.json'`) or move it into Dataverse tables later (`Session`, `KeyPoint`, `Announcement`, `FollowUp`).
+
+## Conference Quest (Power Apps code app)
+
+`conference-quest-app/` is a just-for-fun retro game version of these notes, rebuilt from a Claude Design prototype. Gino and Anthony walk the conference hallway. Each of the 11 sessions is a classroom deck built from `data/sessions/*.json`, with key points, announcements, key slide photos, perspectives and open questions. An expo hall built from `data/conference.json` sums up the big takeaways and is open from the start. The "boring document" option downloads `docs/PPCC 2026 Conference Summary.docx`.
+
+- Environment: **Development** (Cuccia Home), solution **PowerPlatformConference**
+- Play: https://apps.powerapps.com/play/e/cb3e4efb-5403-e59f-aafa-9d41ea217a1b/app/d464dfd9-acce-41f5-b289-28cb8fc1f260?tenantId=714f79a0-a041-4111-aad1-9f67d8939a8e
+- Content comes straight from `data/` and `docs/` at build time. Edit the JSON (or `scripts/make_data.py`), then rebuild and push.
+- Build and deploy steps, decisions and IDs: [conference-quest-app/memory-bank.md](conference-quest-app/memory-bank.md)

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "appId": "d464dfd9-acce-41f5-b289-28cb8fc1f260",
+  "appDisplayName": "Conference Quest",
+  "region": "prod",
+  "appType": "CodeApp",
+  "environmentId": "cb3e4efb-5403-e59f-aafa-9d41ea217a1b",
+  "description": "Retro game-style tour of the PPCC 2026 session notes (Gino + Anthony).",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {},
+  "databaseReferences": {}
+}
