@@ -1,7 +1,8 @@
 // Game state and rules, ported from the Claude Design prototype's Component class.
 // A tiny external store: React subscribes with useSyncExternalStore (see useGame.ts).
 import docUrl from '../../../docs/PPCC 2026 Conference Summary.docx?url';
-import { SESSIONS } from '../data/conference';
+import { SESSIONS, attendedBy } from '../data/conference';
+import type { Person } from '../data/conference';
 import { buildDeck, buildExpoDeck } from '../data/deck';
 import type { Slide } from '../data/deck';
 
@@ -19,6 +20,7 @@ export interface GameState {
   done: string[];       // finished session ids
   wipe: boolean;        // screen transition
   zoom: string | null;  // slide photo shown full screen
+  who: Person | null;   // hallway filter: only sessions this person attended
 }
 
 const N = SESSIONS.length;
@@ -52,7 +54,7 @@ function saveDone(ids: string[]) {
 export class Game {
   state: GameState = {
     screen: 'welcome', wSel: 1, hSel: 0, sIdx: 0, slide: 0,
-    text: START_TEXT, chars: 0, done: loadDone(), wipe: false, zoom: null,
+    text: START_TEXT, chars: 0, done: loadDone(), wipe: false, zoom: null, who: null,
   };
 
   private listeners = new Set<() => void>();
@@ -111,6 +113,22 @@ export class Game {
 
   hallCount() { return N + 1; } // sessions + the expo hall row (always open)
 
+  // Hallway rows shown under the current filter: session indexes, then N for the expo row.
+  visible(who = this.state.who): number[] {
+    const rows = SESSIONS.map((_, i) => i).filter((i) => !who || attendedBy(SESSIONS[i]).includes(who));
+    return [...rows, N];
+  }
+
+  // Picking the active person again clears the filter.
+  setWho(p: Person) {
+    const who = this.state.who === p ? null : p;
+    const rows = this.visible(who);
+    const hSel = rows.includes(this.state.hSel) ? this.state.hSel : rows[0];
+    this.set({ who, hSel });
+    const name = p === 'gino' ? 'GINO' : 'ANTHONY';
+    this.say(who ? `${name}: These are the sessions I went to.` : 'GINO: Back to the full list.');
+  }
+
   // ---- navigation ----
   go(screen: Screen, after?: () => void) {
     if (this.state.wipe) return;
@@ -156,9 +174,10 @@ export class Game {
     const id = SESSIONS[s.sIdx].id;
     const done = last && !s.done.includes(id) ? [...s.done, id] : s.done;
     if (done !== s.done) saveDone(done);
-    const next = SESSIONS.findIndex((x, i) => i > s.sIdx && !done.includes(x.id));
-    const firstOpen = SESSIONS.findIndex((x) => !done.includes(x.id));
-    const hSel = !last ? s.hSel : done.length >= N ? N : next >= 0 ? next : Math.max(firstOpen, 0);
+    const rows = this.visible();
+    const next = rows.find((i) => i > s.sIdx && i < N && !done.includes(SESSIONS[i].id)) ?? -1;
+    const firstOpen = rows.find((i) => i < N && !done.includes(SESSIONS[i].id)) ?? -1;
+    const hSel = !last ? s.hSel : done.length >= N ? N : next >= 0 ? next : firstOpen >= 0 ? firstOpen : rows[0];
     this.set({ done, hSel });
     this.toHall(last ? this.hallText(done) : "GINO: We'll catch the recording.");
   }
@@ -197,9 +216,11 @@ export class Game {
         }
         break;
       case 'hall': {
-        const n = this.hallCount();
-        if (k === 'up') this.set({ hSel: (s.hSel + n - 1) % n });
-        if (k === 'down') this.set({ hSel: (s.hSel + 1) % n });
+        const rows = this.visible();
+        const n = rows.length;
+        const at = Math.max(rows.indexOf(s.hSel), 0);
+        if (k === 'up') this.set({ hSel: rows[(at + n - 1) % n] });
+        if (k === 'down') this.set({ hSel: rows[(at + 1) % n] });
         if (k === 'A') { if (this.typing()) return this.finishTyping(); this.pick(s.hSel); }
         if (k === 'B') this.toStart();
         break;

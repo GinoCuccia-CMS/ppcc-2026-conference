@@ -55,6 +55,9 @@ a:hover { color: #a8305a; }
 .chip.g { background: #3868c8; }
 .chip.a { background: #c04018; }
 .chip.none { background: #fff; color: #8890a0; border: 2px dashed #b8bccb; width: 14px; height: 14px; }
+.pal { position: relative; cursor: pointer; outline: none; }
+.pal img { width: 150px; height: 159px; display: block; }
+.pal:hover img, .pal:focus-visible img, .pal.on img { filter: drop-shadow(0 0 5px #ffd84a) drop-shadow(0 0 2px #ffd84a); }
 
 /* ---------- whiteboard ---------- */
 .board { position: absolute; left: 36px; top: 10px; width: 690px; height: 340px; background: #fff; border: 6px solid #404050; box-sizing: border-box; box-shadow: 0 6px 0 #b8b0a0; display: flex; flex-direction: column; }

@@ -87,20 +87,33 @@ export function Hallway() {
         <Decor html={COUNTER} />
       </div>
 
-      <div style={{ position: 'absolute', left: 330, top: 265, display: 'flex', alignItems: 'flex-end', pointerEvents: 'none' }}>
-        <img src={SPRITES.ginoBack} alt="Gino" style={{ width: 150, height: 159, display: 'block' }} />
-        <img src={SPRITES.anthonyBack} alt="Anthony" style={{ width: 150, height: 159, display: 'block', marginLeft: -14 }} />
+      {/* Gino and Anthony: click one to show only the sessions they went to, click again to show all */}
+      <div style={{ position: 'absolute', left: 330, top: 265, display: 'flex', alignItems: 'flex-end' }}>
+        {(['gino', 'anthony'] as const).map((p, k) => {
+          const name = p === 'gino' ? 'Gino' : 'Anthony';
+          const on = state.who === p;
+          const tip = on ? 'Show all sessions' : `Show ${name}'s sessions`;
+          return (
+            <div key={p} role="button" tabIndex={0} aria-pressed={on} aria-label={tip}
+              className={`pal${on ? ' on' : ''}`} style={{ marginLeft: k ? -14 : 0 }}
+              onClick={() => game.setWho(p)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); game.setWho(p); } }}>
+              <img src={p === 'gino' ? SPRITES.ginoBack : SPRITES.anthonyBack} alt={name} />
+            </div>
+          );
+        })}
       </div>
 
       <button type="button" className="btn pill" style={{ left: 20, top: 16 }} onClick={() => game.extra('phone')}>Skip a session</button>
 
       <div className="panel" style={{ right: 20, top: 20, width: 420, padding: '10px 10px 8px' }}>
         <div style={{ fontSize: 16, fontWeight: 800, color: '#a8305a', padding: '0 8px 6px', display: 'flex', justifyContent: 'space-between' }}>
-          <span>SESSIONS</span><span>★ {state.done.length}/{SESSIONS.length}</span>
+          <span>{state.who ? `${state.who === 'gino' ? "GINO'S" : "ANTHONY'S"} SESSIONS` : 'SESSIONS'}</span><span>★ {state.done.length}/{SESSIONS.length}</span>
         </div>
-        <div className="session-list" ref={listRef} role="listbox" aria-label="Sessions">
+        <div className="session-list" ref={listRef} role="listbox" aria-label={state.who ? `Sessions ${state.who === 'gino' ? 'Gino' : 'Anthony'} attended` : 'Sessions'}>
           {SESSIONS.map((s, i) => {
             const people = attendedBy(s);
+            if (state.who && !people.includes(state.who)) return null;
             const sel = i === state.hSel;
             return (
               <div key={s.id} role="option" aria-selected={sel} data-sel={sel} className={`btn row${sel ? ' sel' : ''}`}
